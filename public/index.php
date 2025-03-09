@@ -2,10 +2,18 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$app = App\Core\Application::getInstance(dirname(__DIR__));
+$app = \App\Core\Application::getInstance(__DIR__ . '/..');
 
-if ($app->get('config')['app']['debug'] ?? false) {
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
+$router = new \App\Core\Routing\Router();
+
+require_once __DIR__ . '/../routes/web.php';
+require_once __DIR__ . '/../routes/api.php';
+
+try {
+    $router->dispatch();
+} catch (\Exception $e) {
+    if ($_ENV['APP_DEBUG']) {
+        throw $e;
+    }
+    echo 'Something went wrong!';
 }

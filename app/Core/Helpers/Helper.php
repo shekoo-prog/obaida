@@ -4,7 +4,11 @@ namespace App\Core\Helpers;
 
 class Helper
 {
-    // ... existing helper methods ...
+    public static function view($name, $data = [])
+    {
+        $view = new \App\Core\View\View();
+        return $view->render($name, $data);
+    }
 
     public static function env($key, $default = null)
     {
@@ -27,5 +31,13 @@ class Helper
         }
 
         return $value;
+    }
+
+    public static function debug($value)
+    {
+        echo '<pre>';
+        var_dump($value);
+        echo '</pre>';
+        exit;
     }
 }

@@ -66,5 +66,9 @@ class Application
     }
 
     private function __clone() {}
-    private function __wakeup() {}
+    // Change from protected to public
+    public function __wakeup()
+    {
+        self::$instance = $this;
+    }
 }

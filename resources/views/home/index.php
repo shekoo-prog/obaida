@@ -1,20 +1,22 @@
-<?php $this->extends('layouts.app') ?>
+<?php
 
-<?php $this->section('title') ?>
+use App\Core\Helpers\Helper;
+
+$view->extends('layouts.app') ?>
+
+<?php $view->section('title') ?>
 Home Page
-<?php $this->endSection() ?>
+<?php $view->endSection() ?>
 
-<?php $this->section('header') ?>
+<?php $view->section('header') ?>
 <nav>
     <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
 </nav>
-<?php $this->endSection() ?>
+<?php $view->endSection() ?>
 
-<?php $this->section('content') ?>
+<?php $view->section('content') ?>
 <div class="container">
-    <h1>Welcome to <?= $_ENV['APP_NAME'] ?></h1>
+    <h1>Welcome to <?= Helper::env('APP_NAME') ?></h1>
     <p>Start building something amazing!</p>
 </div>
-<?php $this->endSection() ?>
+<?php $view->endSection() ?>
