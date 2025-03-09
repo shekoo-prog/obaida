@@ -1,0 +1,39 @@
+.error-500 {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.error-500 .error-code {
+    font-size: 8rem;
+    font-weight: 700;
+    color: #dc3545;
+    text-shadow: 2px 2px 4px rgba(220, 53, 69, 0.2);
+    margin-bottom: 2rem;
+}
+
+.error-500 h1 {
+    color: #343a40;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.error-500 p {
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+.error-500 .back-home {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.error-500 .back-home:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
+}
