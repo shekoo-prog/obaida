@@ -1,0 +1,43 @@
+# Environment files
+.env
+.env.backup
+
+# Storage
+/storage/*.key
+/storage/logs/*
+/storage/cache/*
+/storage/uploads/*
+!storage/logs/.gitkeep
+!storage/cache/.gitkeep
+!storage/uploads/.gitkeep
+
+# Composer
+/vendor
+composer.lock
+
+# IDE specific files
+.idea
+.vscode
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Application specific
+/public/uploads
+/public/storage
+
+# Cache and logs
+*.log
+*.cache
+
+# Test coverage
+/coverage
+.phpunit.result.cache
